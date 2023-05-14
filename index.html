@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style= "background-color: midnightblue;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <h1 style= "font-size:70px; text-align:center;"> Login Page </h1>
+    
+<body style= "font-size:40px; text-align: center; color: white;">
+   <form method="POST" action="">
+    <label for = "username" >Username:</label> 
+    <input type = "text" name = 'username' required>
+    <br>
+    <label for = "password" >Password:</label>
+    <input type = "password" name = 'password' required>
+<br>
+    <button
+      style="
+        background-color: rgb(50, 36, 200);
+        color: rgb(240, 243, 246);
+        border-radius: 8px;
+        height: 40px;
+        width: 100px;
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+          sans-serif;"
+      type= "submit"
+    >Done
+    </button>
+     <br> 
+  
+    <a href="{{ url_for('signup') }}" style= "font-size: 20px; color:white" ><i> Click here to sign up!</i> </a>
+     
+  <br>
+    <a href="{{ url_for('forgotpassword') }}" style= "font-size: 20px; color:white;" ><i>Forgot password</a></i>
+  </form>
+    
+</body>
+</html>
