@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html style="background-color:bisque;">
+<head>
+  <title>User Data</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Table</h1>
+   <form method="POST" >
+
+    <!-- Don't need for them to input name and email again since you already asked for it-->
+    
+    <!-- if you get rid of this rmb to change the table headings as well-->
+
+  <h2 style="text-align: center; font-weight: light; >
+    <label for = "height" style="font-size:25px;">Input height:</label>
+    <input type = "number" name = 'height' style="text-align:center;" placeholder = 'in metres' step = '0.01' required> <br>
+    <label for = "weight" style="font-size:25px;">Input weight:</label>
+    <input type = "number" name = 'weight' style="text-align:center;" placeholder = 'in kilograms' step = '0.1' required> <br>
+    <button type = "submit" style="font-size:15px;">Done</button>
+  </form> 
+  </h2>
+
+  <!-- Also for privacy reasons you should not display people's info next to thier actual name, should use their username or make it private -->
+  <p>Healthy Weight </p>
+   <ul>    
+      {% if healthy %}
+        {% for h in healthy %}  <!-- for 1 row in rows -->
+            <li>{{ h[0] }}: {{ h[1] }}m - {{ h[2] }}kg - {{ h[3] }}</li>
+        {% endfor %}
+      {% endif %}    
+  </ul>
+
+
+
+  
+ <p>Underweight</p>
+  <ul>
+      {% if under %}
+        {% for u in under %}
+           <li>{{ u[0] }}: {{ u[1] }}m - {{ u[2] }}kg - {{ u[3] }}</li>
+        {% endfor %}
+      {% endif %}
+  </ul>
+
+
+
+
+ <p>Overweight </p>
+  <ul>
+      {% if over %}
+        {% for o in over %}
+           <li>{{ o[0] }}: {{ o[1] }}m - {{ o[2] }}kg - {{ o[3] }}</li>
+        {% endfor %}
+      {% endif %}
+  </ul>
+
+
+
+
+  
+
+ <p>Obese</p>
+  <ul>
+      {% if obese %}
+        {% for ob in obese %}
+           <li>{{ ob[0] }}: {{ ob[1] }}m - {{ ob[2] }}kg - {{ ob[3] }}</li>
+        {% endfor %}
+      {% endif %}
+  </ul>
+
+
+  
+
+     <br> 
+
+<a href="https://fakestw2.margcp.repl.co/bot"  > Click here for chatbot! </a> 
+
+  
+</body>
+</html>
